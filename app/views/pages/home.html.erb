@@ -1,0 +1,21 @@
+<html>
+		<h1>Jianjun Li</h1>
+		
+		<table> 
+			<tr>
+				<th>Project Name</th>
+				<th>Description</th>
+				<th>URL</th>
+			<tr>
+		<% PROJECTS.each do |project, details, url| %>
+			
+			<tr>
+				<td><%= project %></td>
+				<td><%= details['description'] %></td>
+				<td><%= link_to details['url'] %></td>
+
+			</tr>
+		<% end %>
+		</table>
+
+</html>
