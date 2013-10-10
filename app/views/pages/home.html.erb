@@ -12,7 +12,7 @@
 			<tr>
 				<td><%= project %></td>
 				<td><%= details['description'] %></td>
-				<td><a href =<%= details['url'] %> <%= link_to details['url'] %></a></td>
+				<td><%= link_to details['url'], details['url'] %></a></td>
 
 			</tr>
 		<% end %>
