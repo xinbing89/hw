@@ -5,4 +5,7 @@ class PagesController < ApplicationController
 	def project_2
 	end
 
+	def calendar
+	end
+
 end

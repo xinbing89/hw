@@ -44,6 +44,8 @@ end
 
 gem 'bootstrap-sass'
 
+gem 'twitter-bootstrap-rails'
+
 group :development do
   gem 'sqlite3', '1.3.8'
 end
