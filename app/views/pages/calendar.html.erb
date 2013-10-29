@@ -8,14 +8,19 @@
   border-collapse:  collapse;
 }
     	td, th {
-
         	border: thin solid gray;
        	 
         	margin-right: 20px;
     	}    
 
-	th.button_arrow{
-    	color: darkblue;
+    	button {
+     	color: gray;
+        	border: none;
+        	//background-color:transparent;
+        	font-weight:900;
+    	}
+	th.arrow{
+    	color: #9933FF;
 	}
 	button.button_current_day{
     	color: black;
@@ -182,9 +187,9 @@ else {
 	//////////////////////////////////////////////////////////////////////////////////////////////////
 
 	if (  (i == day) && (month == current.getMonth() ) && (year == current.getFullYear())  ){
-    	padding +="<td height='50' class='currentday' bgcolor=\"#d9d9d9\" onMouseOver='this.style.background=\"#989898\"; this.style.color=\"#000000\"' onMouseOut='this.style.background=\"#D9D9D9\"; this.style.color=\"#000000\"' button id=\"btn"+i+"\" class=\"button_current_day\"  onclick =\"addRow("+i+")\">"+i+" <ul id=\"ul_"+i+"\"></ul></td>";
+    	padding +="<td height='50' class='currentday' bgcolor=\"#d9d9d9\" onMouseOver='this.style.background=\"#989898\"; this.style.color=\"#000000\"' onMouseOut='this.style.background=\"#D9D9D9\"; this.style.color=\"#000000\"' button id=\"btn"+i+"\" class=\"button_current_day\"  onclick =\"addRow("+i+")\"><font color='gray'>"+i+"</font><ul id=\"ul_"+i+"\"></ul></td>";
 	}else{
-    	padding +="<td height='50' class='currentmonth' onMouseOver='this.style.background=\"#989898\"' onMouseOut='this.style.background=\"#FFFFFF\"' button id=\"btn"+i+"\" onclick=\"addRow("+i+")\"><font color=\"gray\">"+i+"</font><ul id=\"ul_"+i+"\"></ul></td>";    
+    	padding +="<td height='50' class='currentmonth' onMouseOver='this.style.background=\"#989898\"' onMouseOut='this.style.background=\"#FFFFFF\"' button id=\"btn"+i+"\" onclick=\"addRow("+i+")\"><font color='gray'>"+i+"</font> <ul id=\"ul_"+i+"\"></ul></td>";    
 
 	}
     
@@ -199,7 +204,7 @@ else {
  // name and days of the week.    	//
  /////////////////////////////////////////
 
- var calendarTable = "<table class='calendar' width='995'> <tr class='currentmonth'><th button class='button_arrow' onclick='calendar(1)'> &#60&#60 </th><th button class='button_arrow' onclick='calendar(2)'> &#60 </th><th button  colspan='3' height='30'>"+monthNames[month]+" "+ year +"</th><th button class='button_arrow' onclick='calendar(3)'> &#62 </th><th button class='button_arrow' onclick='calendar(4)'> &#62&#62 </th></tr>";
+ var calendarTable = "<table class='calendar' width='995'> <tr class='currentmonth'><th class='arrow' button onclick='calendar(1)'> &#60&#60 </th><th  class='arrow' button onclick='calendar(2)'> &#60 </th><th button colspan='3' height='30'>"+monthNames[month]+" "+ year +"</th><th  class='arrow' button onclick='calendar(3)'> &#62 </th><th  class='arrow'  button onclick='calendar(4)'> &#62&#62 </th></tr>";
  calendarTable +="<tr class='weekdays'>  <td height='30'>Sun</td>  <td>Mon</td> <td>Tues</td> <td>Wed</td> <td>Thurs</td> <td>Fri</td> <td>Sat</td> </tr>";
  calendarTable += "<tr height='50'>";
  calendarTable += padding;
@@ -218,7 +223,7 @@ $('#orderform').submit(function() {
 
 function addRow(list_number){
 	if(!dt.value==""){
-    	$("#ul_"+list_number).append("<li>"+time_t.value +" "+ dt.value+"</li>");
+    	$("#ul_"+list_number).append("<li>"+ time_t.value +" "+ dt.value + "</li>");
     	dt.value="";
     	time_t.value="00:00";
 	}else{
@@ -229,6 +234,7 @@ function addRow(list_number){
 </head>
 
 <body>
+	<h3>Group: Rafael Sanchez, Jianjun Li <br /> </h3>
 	Time <br />
 	<select id="time_t" name="Time">
     	<option value="00:00">00:00</option>
@@ -288,6 +294,12 @@ function addRow(list_number){
 
 <div id="calendar"></div>
 
-<p>If the calendar does not show, refresh the page</p>
+<p>If the calendar does not load, refresh the page</p>
 </body>
 </html>
+
+
+
+
+
+
