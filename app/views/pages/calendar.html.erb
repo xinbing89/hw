@@ -203,7 +203,7 @@ else {
  // name and days of the week.    	//
  /////////////////////////////////////////
 
- var calendarTable = "<table class='calendar' width='995'> <tr class='currentmonth'><th button onclick='calendar(1)'> &#60&#60 </th><th button onclick='calendar(1)'> &#60 </th><th button onclick='calendar(2)' colspan='3' height='30'>"+monthNames[month]+" "+ year +"</th><th button onclick='calendar(3)'> &#62 </th><th button onclick='calendar(4)'> &#62&#62 </th></tr>";
+ var calendarTable = "<table class='calendar' width='995'> <tr class='currentmonth'><th button onclick='calendar(1)'> &#60&#60 </th><th button onclick='calendar(2)'> &#60 </th><th button colspan='3' height='30'>"+monthNames[month]+" "+ year +"</th><th button onclick='calendar(3)'> &#62 </th><th button onclick='calendar(4)'> &#62&#62 </th></tr>";
  calendarTable +="<tr class='weekdays'>  <td height='30'>Sun</td>  <td>Mon</td> <td>Tues</td> <td>Wed</td> <td>Thurs</td> <td>Fri</td> <td>Sat</td> </tr>";
  calendarTable += "<tr height='50'>";
  calendarTable += padding;
@@ -293,12 +293,6 @@ function addRow(list_number){
 <div id="calendar"></div>
 
 <p>Click on the numbers to add an event!</p>
-
+<p>If the calendar does not show, refresh the page</p>
 </body>
 </html>
-
-
-
-
-
-
