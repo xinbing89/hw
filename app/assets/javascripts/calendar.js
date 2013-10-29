@@ -1,4 +1,4 @@
-<SCRIPT LANGUAGE="JavaScript">
+<SCRIPT>
 var count_year = 0;
 var count_month = 0;
 function calendar(){
