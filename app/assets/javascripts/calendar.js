@@ -1,57 +1,4 @@
-<html>
-<head>
-	<title>        	</title>
-	<style type="text/css">
-    	table {
-      	border:       	thin solid black;
-  caption-side: 	bottom;
-  border-collapse:  collapse;
-}
-    	td, th {
-        	border: thin solid gray;
-       	 
-        	margin-right: 20px;
-    	}    
-    	button {
-     	color: gray;
-        	border: none;
-        	//background-color:transparent;
-        	font-weight:900;
-    	}
-	th.button_arrow{
-    	color: darkblue;
-	}
-	button.button_current_day{
-    	color: black;
-	}
-	</style>
-<style>
-.premonth{
- color: gray;
- text-align: center;
-}
-.currentmonth{
- text-align: left;
-}
-.currentday{
- text-align: left;
-}
-.calendar td{
- padding: 2px;
- width: 50px;
-}
-.currentmonth th{
- text-align: center;
-}
-.weekdays{
-font-weight: bold;
- text-align: center;
-}
-
-</style>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-</script>
-<script>
+<SCRIPT LANGUAGE="JavaScript">
 var count_year = 0;
 var count_month = 0;
 function calendar(){
@@ -186,9 +133,9 @@ else {
 	//////////////////////////////////////////////////////////////////////////////////////////////////
 
 	if (  (i == day) && (month == current.getMonth() ) && (year == current.getFullYear())  ){
-    	padding +="<td height='50' class='currentday' bgcolor=\"#d9d9d9\" onMouseOver='this.style.background=\"#989898\"; this.style.color=\"#000000\"' onMouseOut='this.style.background=\"#D9D9D9\"; this.style.color=\"#000000\"'><button id=\"btn"+i+"\" class=\"button_current_day\"  onclick =\"addRow("+i+")\">"+i+"</button><ul id=\"ul_"+i+"\"></ul></td>";
+    	padding +="<td height='50' class='currentday' bgcolor=\"#d9d9d9\" onMouseOver='this.style.background=\"#989898\"; this.style.color=\"#000000\"' onMouseOut='this.style.background=\"#D9D9D9\"; this.style.color=\"#000000\"' button id=\"btn"+i+"\" class=\"button_current_day\"  onclick =\"addRow("+i+")\">"+i+" <ul id=\"ul_"+i+"\"></ul></td>";
 	}else{
-    	padding +="<td height='50' class='currentmonth' onMouseOver='this.style.background=\"#989898\"' onMouseOut='this.style.background=\"#FFFFFF\"'><button id=\"btn"+i+"\" onclick=\"addRow("+i+")\">"+i+"</button><ul id=\"ul_"+i+"\"></ul></td>";    
+    	padding +="<td height='50' class='currentmonth' onMouseOver='this.style.background=\"#989898\"' onMouseOut='this.style.background=\"#FFFFFF\"' button id=\"btn"+i+"\" onclick=\"addRow("+i+")\"><font color=\"gray\">"+i+"</font><ul id=\"ul_"+i+"\"></ul></td>";    
 
 	}
     
@@ -229,70 +176,4 @@ function addRow(list_number){
     	alert("Missing Description Field");
 	}
 }
-</script>
-</head>
-
-<body>
-	Time <br />
-	<select id="time_t" name="Time">
-    	<option value="00:00">00:00</option>
-    	<option value="00:30">00:30</option>
-    	<option value="01:00">01:00</option>
-    	<option value="01:30">01:30</option>
-    	<option value="02:00">02:00</option>
-    	<option value="02:30">02:30</option>
-    	<option value="03:00">03:00</option>
-    	<option value="03:30">03:30</option>
-    	<option value="04:00">04:00</option>
-    	<option value="04:30">04:30</option>
-    	<option value="05:00">05:00</option>
-    	<option value="05:30">05:30</option>
-    	<option value="06:00">06:00</option>
-    	<option value="06:30">06:30</option>
-    	<option value="07:00">07:00</option>
-    	<option value="07:30">07:30</option>
-    	<option value="08:00">08:00</option>
-    	<option value="08:30">08:30</option>
-    	<option value="09:00">09:00</option>
-    	<option value="09:30">09:30</option>
-    	<option value="10:00">10:00</option>
-    	<option value="10:30">10:30</option>
-    	<option value="11:00">11:00</option>
-    	<option value="11:30">11:30</option>
-    	<option value="12:00">12:00</option>
-    	<option value="12:30">12:30</option>
-    	<option value="13:00">13:00</option>
-    	<option value="13:30">13:30</option>
-    	<option value="14:00">14:00</option>
-    	<option value="14:30">14:30</option>
-    	<option value="15:00">15:00</option>
-    	<option value="15:30">15:30</option>
-    	<option value="16:00">16:00</option>
-    	<option value="16:30">16:30</option>
-    	<option value="17:00">17:00</option>
-    	<option value="17:30">17:30</option>
-    	<option value="18:00">18:00</option>
-    	<option value="18:30">18:30</option>
-    	<option value="19:00">19:00</option>
-    	<option value="19:30">19:30</option>
-    	<option value="20:00">20:00</option>
-    	<option value="20:30">20:30</option>
-    	<option value="21:00">21:00</option>
-    	<option value="21:30">21:30</option>
-    	<option value="22:00">22:00</option>
-    	<option value="22:30">22:30</option>
-    	<option value="23:00">23:00</option>
-    	<option value="23:30">23:30</option>
-	</select>
-	<br /> <br /> Description <br />
-	<input type="text" name="description" id="dt" value=""/>
-	<br /> <br />
- 
-<body onload="calendar()">
-
-<div id="calendar"></div>
-
-<p>Click on the numbers to add an event!</p>
-<p>If the calendar does not show, refresh the page</p>
-</body>
-</html>
+</SCRIPT>
